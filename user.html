@@ -1,0 +1,84 @@
+<html>
+<head>
+<title>User registration form</title>
+<link rel="stylesheet" type="text/css" href="font.css">
+</link>
+</head>
+<body>
+	<script type="text/javascript">
+		function check()
+		{
+			var first=document.user.first.value;
+			if(!(first.match(/^[a-z A-Z]+$/)))
+				alert("Please enter valid first name");
+			var last=document.user.last.value;
+			if(!(last.match(/^[a-z A-Z]+$/)))
+				alert("Please enter valid last name");
+			/*var mail=document.user.mail.value;
+			if(!(mail.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/))
+				alert("Please enter valid email");*/
+			
+			
+		}
+	</script>
+	<font>
+	<h1><center>USER REGISTRATION FORM</center></h1>
+	<form name="user">
+	<br>
+	<br>
+	<br>
+	<p>
+	<fieldset>
+	<legend><center>NAME</center></legend>
+	FIRST NAME: &nbsp; &nbsp;
+	<input type="text" name="first">
+	</input>
+	<br>
+	<br>
+	LAST NAME &nbsp; &nbsp;
+	<input type="text" name="last">
+	</input>
+	</fieldset>
+	<br>
+	<br>
+	<fieldset>
+	<legend>DETAILS</legend>
+	BIRTH DATE: &nbsp; &nbsp;
+	<input type="date">
+	</input>
+	<br>
+	<br>
+	EMAIL ID: &nbsp; &nbsp;
+	<input type="text" name="mail">
+	</input>
+	<br>
+	<br>	
+	GENDER: &nbsp;&nbsp;
+	 <table>
+	<tr colspan=2>
+		<td>
+			<input type="radio" name="gender">MALE</input>
+			<br>
+			<input type="radio" name="gender">FEMALE</input>
+		</td>
+	</tr>
+	</table>
+	<br>
+	<br>
+	HOBBIES: &nbsp;&nbsp;
+	<select name="hobbies">
+    		<option value="reading" >Reading</option>
+    		<option value="music" >Listening to music</option>
+    		<option value="dancing" >Dancing</option>
+	</select>
+	<br>
+	<br>
+	</fieldset>
+	<br>
+	<br>
+	<center><input type="submit" value="SUBMIT" onClick="return check();"></center>
+	</p>
+	</font>
+	</form>
+</body>
+</html>
